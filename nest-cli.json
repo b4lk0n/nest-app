@@ -1,5 +1,19 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "src",
+  "projects": {
+    "topology-config": {
+      "type": "library",
+      "root": "libs/topology-config",
+      "entryFile": "index",
+      "sourceRoot": "libs/topology-config/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/topology-config/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
 }
